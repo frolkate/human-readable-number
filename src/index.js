@@ -6,13 +6,10 @@ module.exports = function toReadable (number) {
         let exeptNumber = ["", "twen", "thir", "", "fif"];
         
         let remainderDivision_100 = number % 100;
-          console.log(remainderDivision_100);
         let hundredNumber = number - remainderDivision_100; 
-          console.log (hundredNumber);
         let simpleNumber  = remainderDivision_100 % 10;
-          console.log(simpleNumber);
         let tenNumber =  remainderDivision_100 - simpleNumber;
-          console.log(tenNumber);
+
 
         let isHundred = false;
         let isTen = false;
