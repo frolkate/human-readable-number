@@ -36,12 +36,12 @@ module.exports = function toReadable (number) {
               }
                           if (i=== 1 && simpleNumber > 2) {
                  isSimple = true;
-                 if(i === 2 || i === 3 || i === 5)  stringNumber +=  `${exeptNumber[simpleNumber - 1]}teen `;
+                 if(i === 2 || i === 3 || i === 5)  stringNumber +=  `${exeptNumber[simpleNumber - 1]}teen`;
                  else 
-                 stringNumber +=  `${wordsNumber[simpleNumber - 1]}teen `;
+                 stringNumber +=  `${wordsNumber[simpleNumber - 1]}teen`;
               }
               else{
-                if(i === 2 || i === 3 || i === 4 || i === 5 || i===8)  stringNumber +=  `${exeptNumber[i - 1]}ty `;
+                if(i === 2 || i === 3 || i === 4 || i === 5 || i===8)  stringNumber +=  `${exeptNumber[i - 1]}ty`;
                 else 
               stringNumber +=  `${wordsNumber[i - 1]}ty`;
             }
@@ -50,7 +50,7 @@ module.exports = function toReadable (number) {
           for (i = 0; i < wordsNumber.length; i ++)
         {
             if (simpleNumber === i && i != 0 && isSimple === false) {
-              stringNumber +=  ` ${wordsNumber[i - 1]}`;
+              stringNumber +=` ${wordsNumber[i - 1]}`;
             }
         }
         return stringNumber;       
