@@ -1,7 +1,7 @@
 module.exports = function toReadable (number) {
 
         let wordsNumber = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
-        let exeptNumber = ["", "twen", "thir", "", "fif"];
+        let exeptNumber = ["", "twen", "thir", "for", "fif", "", "","eigh"];
         
         let remainderDivision_100 = number % 100;
         let hundredNumber = number - remainderDivision_100; 
@@ -41,7 +41,7 @@ module.exports = function toReadable (number) {
                  stringNumber +=  `${wordsNumber[simpleNumber - 1]}teen `;
               }
               else{
-                if(i === 2 || i === 3 || i === 5)  stringNumber +=  `${exeptNumber[i - 1]}ty `;
+                if(i === 2 || i === 3 || i === 4 || i === 5 || i===8)  stringNumber +=  `${exeptNumber[i - 1]}ty `;
                 else 
               stringNumber +=  `${wordsNumber[i - 1]}ty `;
             }
