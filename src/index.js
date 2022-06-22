@@ -1,4 +1,4 @@
-export default function toReadable (number) {
+module.exports = function toReadable (number) {
 
         let wordsNumber = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
         let exeptNumber = ["", "twen", "thir", "", "fif"];
@@ -55,8 +55,3 @@ export default function toReadable (number) {
         }
         return stringNumber;       
 }
-<<<<<<< HEAD
-=======
-}
-console.log( toReadable (797) );
->>>>>>> afc26121e105e3970b73f337384ac757ad7f0804
