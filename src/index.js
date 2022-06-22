@@ -1,4 +1,4 @@
-module.exports = function toReadable (number) {
+export default function toReadable (number) {
 
     function toReadable (number) {
 
@@ -59,3 +59,4 @@ module.exports = function toReadable (number) {
         
 }
 }
+console.log( toReadable (797) );
