@@ -43,14 +43,14 @@ module.exports = function toReadable (number) {
               else{
                 if(i === 2 || i === 3 || i === 4 || i === 5 || i===8)  stringNumber +=  `${exeptNumber[i - 1]}ty `;
                 else 
-              stringNumber +=  `${wordsNumber[i - 1]}ty `;
+              stringNumber +=  `${wordsNumber[i - 1]}ty`;
             }
             }
         }
           for (i = 0; i < wordsNumber.length; i ++)
         {
             if (simpleNumber === i && i != 0 && isSimple === false) {
-              stringNumber +=  `${wordsNumber[i - 1]}`;
+              stringNumber +=  ` ${wordsNumber[i - 1]}`;
             }
         }
         return stringNumber;       
