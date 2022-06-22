@@ -36,7 +36,7 @@ module.exports = function toReadable (number) {
               }
                           if (i=== 1 && simpleNumber > 2) {
                  isSimple = true;
-                 if(i === 2 || i === 3 || i === 5)  stringNumber +=  `${exeptNumber[simpleNumber - 1]}teen`;
+                 if(i === 2 || i === 3 || i === 5 || i===8)  stringNumber +=  `${exeptNumber[simpleNumber - 1]}teen`;
                  else 
                  stringNumber +=  `${wordsNumber[simpleNumber - 1]}teen`;
               }
