@@ -1,7 +1,5 @@
 module.exports = function toReadable (number) {
 
-    function toReadable (number) {
-
         let wordsNumber = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
         let exeptNumber = ["", "twen", "thir", "", "fif"];
         
@@ -55,7 +53,5 @@ module.exports = function toReadable (number) {
               stringNumber +=  `${wordsNumber[i - 1]}`;
             }
         }
-        return stringNumber;
-        
-}
+        return stringNumber;       
 }
