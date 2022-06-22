@@ -3,6 +3,7 @@ module.exports = function toReadable (number) {
     function toReadable (number) {
 
         let wordsNumber = ["one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"];
+        let exeptNumber = ["", "twen", "thir", "", "fif"];
         
         let remainderDivision_100 = number % 100;
           console.log(remainderDivision_100);
@@ -12,9 +13,10 @@ module.exports = function toReadable (number) {
           console.log(simpleNumber);
         let tenNumber =  remainderDivision_100 - simpleNumber;
           console.log(tenNumber);
+
         let isHundred = false;
-          let isTen = false;
-          let isSimple =  false;
+        let isTen = false;
+        let isSimple =  false;
         
         let stringNumber = '';
         
@@ -39,9 +41,13 @@ module.exports = function toReadable (number) {
               }
                           if (i=== 1 && simpleNumber > 2) {
                  isSimple = true;
+                 if(i === 2 || i === 3 || i === 5)  stringNumber +=  `${exeptNumber[simpleNumber - 1]}teen `;
+                 else 
                  stringNumber +=  `${wordsNumber[simpleNumber - 1]}teen `;
               }
               else{
+                if(i === 2 || i === 3 || i === 5)  stringNumber +=  `${exeptNumber[i - 1]}ty `;
+                else 
               stringNumber +=  `${wordsNumber[i - 1]}ty `;
             }
             }
