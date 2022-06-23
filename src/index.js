@@ -13,6 +13,8 @@ module.exports = function toReadable (number) {
   
   let stringNumber = "";
 
+  if (simpleNumber === 0 && tenNumber === 0 && hundredNumber === 0) stringNumber+= "zero";
+
   if(hundredNumber != 0)
   {
     for (i = 0; i < wordsNumber.length; i ++)
@@ -32,12 +34,17 @@ module.exports = function toReadable (number) {
           isTen = true;
         
           if (tenNumber === 2 || tenNumber === 3 || tenNumber === 4 || tenNumber === 5 || i===8)  
-          stringNumber +=  `${exeptNumber[i - 1]}ty`;
+          stringNumber +=  `${exeptNumber[i - 1]}ty `;
             
          if (tenNumber === 6 || tenNumber === 7 || tenNumber === 9)  
         
-        stringNumber +=  `${wordsNumber[i - 1]}ty`;
+        stringNumber +=  `${wordsNumber[i - 1]}ty `;
         
+        if (i=== 1 && simpleNumber === 0) {
+          isSimple = true;
+          stringNumber+= "ten";
+        }
+
         if (i=== 1 && simpleNumber === 1) {
           isSimple = true;
           stringNumber+= "eleven";
@@ -49,12 +56,12 @@ module.exports = function toReadable (number) {
         }
         else { 
            
-        if (tenNumber=== 1)
+        if (tenNumber=== 1 && simpleNumber != 0)
         {
         if ( simpleNumber === 3 || simpleNumber === 5 || simpleNumber===8){                 isSimple = true;
             stringNumber +=  `${exeptNumber[simpleNumber - 1]}teen`;
         }
-        else
+        if ( simpleNumber === 4 || simpleNumber === 6 || simpleNumber===7 || simpleNumber===9)
         {
            isSimple = true;
            stringNumber +=  `${wordsNumber[simpleNumber - 1]}teen`;
@@ -66,8 +73,10 @@ module.exports = function toReadable (number) {
     for (i = 0; i < wordsNumber.length; i ++)
   {
       if (simpleNumber === i && i != 0 && isSimple === false) {
-        stringNumber +=` ${wordsNumber[i - 1]}`;
+        stringNumber +=`${wordsNumber[i - 1]}`;
       }
   }
+
+  if (stringNumber [stringNumber.length - 1] === " ") stringNumber = stringNumber.slice(0, -1);
   return stringNumber;     
 }
